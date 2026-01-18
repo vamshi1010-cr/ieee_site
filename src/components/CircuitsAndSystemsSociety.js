@@ -36,18 +36,19 @@ const CircuitsAndSystems = ({ imgs, num }) => {
   ];
 
   // Define your Chair and Vice Chair data with direct image paths
-  const chairLeadership = [
-    {
-      name: "Samith",
-      position: "Chair",
-      image: "../images/ckts/img1-2025.png", // <--- IMPORTANT: Update with actual filename
-    },
-    {
-      name: "T.Devi Sree Varshini",
-      position: "Vice Chair",
-      image: "../images/ckts/img2-2025.png", // <--- IMPORTANT: Update with actual filename
-    },
-  ];
+const chairLeadership = [
+  {
+    name: "Samith",
+    position: "Chair",
+    image: "/images/ckts/img1-2025.png",
+  },
+  {
+    name: "T.Devi Sree Varshini",
+    position: "Vice Chair",
+    image: "/images/ckts/img2-2025.png",
+  },
+];
+
 
   return (
     <div className="cs-page-container">
