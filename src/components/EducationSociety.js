@@ -35,7 +35,7 @@ const EducationSociety = ({ imgs, num }) => {
       image: "../images/es/img-1 2025.png", // <--- IMPORTANT: Update with actual filename
     },
     {
-      name: "Koushik Ram Reddy",
+      name: "Aashrtha",
       position: "Vice Chair",
       image: "../images/es/img-2 2025.png", // <--- IMPORTANT: Update with actual filename
     },
