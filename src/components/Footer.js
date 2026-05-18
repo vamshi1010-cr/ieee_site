@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
 import ContactForm from "./ContactForm";
-import { Tooltip } from "react-tooltip";
 import {
   FaLink,
   FaEnvelope,
@@ -17,155 +15,162 @@ import "./Footer.css";
 const Footer = () => {
   const [isContactFormVisible, setContactFormVisible] = useState(false);
 
-  const toggleContactForm = () => {
-    setContactFormVisible((prevVisible) => !prevVisible);
-  };
-
   return (
-    <footer className="footer_parent" id="contact1">
-      <Container>
-        {/* Map Section */}
-        <Row className="justify-content-center text-center">
-          <Col md={8} className="mb-4">
-            <h3 className="footer-heading">Visit Us</h3>
-            <div className="map-container">
-              <iframe
-                className="cbit_map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.412650300959!2d78.31686187516509!3d17.391973483495942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94eba8ad7c87%3A0xb78f51ed556f7cc5!2sChaitanya%20Bharathi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1749901812802!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps - CBIT"
-              ></iframe>
-            </div>
-          </Col>
-        </Row>
+    <footer className="footer" id="contact1">
 
-        {/* Links Section */}
-        <Row className="justify-content-center text-center">
-          <Col md={4} className="mb-4">
-            <h3 className="footer-heading">IEEE CBIT</h3>
-            <ul className="list-unstyled footer-links-list">
-              <li>
-                <a href="/#about" className="footer-link">
-                  <FiInfo size={22} className="me-2 footer-icon" />
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/#coreteam" className="footer-link">
-                  <FaUsers size={22} className="me-2 footer-icon" />
-                  Team
-                </a>
-              </li>
-              <li>
-                <a href="/#events" className="footer-link">
-                  <FaCalendarAlt size={22} className="me-2 footer-icon" />
-                  Events
-                </a>
-              </li>
-            </ul>
-          </Col>
+      {/* ── Main footer grid ──────────────────────────────── */}
+      <div className="footer__inner">
 
-          <Col md={4} className="mb-4">
-            <h3 className="footer-heading">Get In Touch</h3>
-            <ul className="list-unstyled footer-links-list">
-              <li>
-                <a href="mailto:cbit_ieee@gmail.com" className="footer-link">
-                  <FaEnvelope size={22} className="me-2 footer-icon" />
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/ieee-cbit/mycompany/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
-                  <FaLinkedin size={22} className="me-2 footer-icon" />
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/ieee_cbit?igshid=NzZlODBkYWE4Ng=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
-                  <FaInstagram size={22} className="me-2 footer-icon" />
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linktr.ee/ieee_cbitsb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
-                  <FaLink size={22} className="me-2 footer-icon" />
-                  Linktree
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/IeeeCbit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
-                  <FaTwitter size={22} className="me-2 footer-icon" />
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
+        {/* Col 1 — Brand */}
+        <div className="footer__brand">
+          <div className="footer__logo">
+            <span className="footer__logo-ieee">IEEE</span>
+            <span className="footer__logo-cbit">CBIT</span>
+          </div>
+          <p className="footer__tagline">
+            Advancing Technology for Humanity — IEEE Student Branch,
+            Chaitanya Bharathi Institute of Technology, Hyderabad.
+          </p>
+          <p className="footer__region">
+            Region 10 · Asia Pacific
+          </p>
+        </div>
 
-        <hr className="footer-divider" />
+        {/* Col 2 — Quick links */}
+        <div className="footer__col">
+          <h4 className="footer__col-heading">Quick Links</h4>
+          <ul className="footer__list">
+            <li>
+              <a href="/#about" className="footer__link">
+                <FiInfo size={15} aria-hidden="true" />
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/#coreteam" className="footer__link">
+                <FaUsers size={15} aria-hidden="true" />
+                Team
+              </a>
+            </li>
+            <li>
+              <a href="/#events" className="footer__link">
+                <FaCalendarAlt size={15} aria-hidden="true" />
+                Events
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        {/* Contact Form Toggle */}
-        <Row>
-          <Col sm={12} className="text-center mt-3">
-            <Button
-              className="contact-form-toggle-btn"
-              onClick={toggleContactForm}
-              data-tooltip-id="contact-form-tooltip"
-            >
-              Contact Form
-            </Button>
-            <Tooltip id="contact-form-tooltip" place="top" effect="solid">
-              {isContactFormVisible
-                ? "Click to close the form"
-                : "Click to fill the form"}
-            </Tooltip>
+        {/* Col 3 — Get in touch */}
+        <div className="footer__col">
+          <h4 className="footer__col-heading">Get In Touch</h4>
+          <ul className="footer__list">
+            <li>
+              <a href="mailto:cbit_ieee@gmail.com" className="footer__link">
+                <FaEnvelope size={15} aria-hidden="true" />
+                cbit_ieee@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ieee-cbit/mycompany/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__link"
+              >
+                <FaLinkedin size={15} aria-hidden="true" />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/ieee_cbit?igshid=NzZlODBkYWE4Ng=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__link"
+              >
+                <FaInstagram size={15} aria-hidden="true" />
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linktr.ee/ieee_cbitsb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__link"
+              >
+                <FaLink size={15} aria-hidden="true" />
+                Linktree
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/IeeeCbit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__link"
+              >
+                <FaTwitter size={15} aria-hidden="true" />
+                Twitter / X
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <div
-              className={`contact-form-container ${
-                isContactFormVisible ? "fade-in" : "fade-out"
-              }`}
-            >
-              {isContactFormVisible && <ContactForm />}
-            </div>
-          </Col>
-        </Row>
+        {/* Col 4 — Visit us */}
+        <div className="footer__col footer__col--map">
+          <h4 className="footer__col-heading">Visit Us</h4>
+          <div className="footer__map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.412650300959!2d78.31686187516509!3d17.391973483495942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94eba8ad7c87%3A0xb78f51ed556f7cc5!2sChaitanya%20Bharathi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1749901812802!5m2!1sen!2sin"
+              width="100%"
+              height="180"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps - CBIT Location"
+            />
+          </div>
+          <p className="footer__address">
+            Gandipet, Hyderabad, Telangana 500075
+          </p>
+        </div>
 
-        <Row>
-          <Col sm={12} className="text-center mt-4 pt-3">
-            <p className="copyright-text">
-              &copy; {new Date().getFullYear()} IEEE CBIT. All Rights Reserved.
-            </p>
-          </Col>
-        </Row>
-      </Container>
+      </div>
+
+      {/* ── Contact form toggle ───────────────────────────── */}
+      <div className="footer__contact-wrap">
+        <button
+          className="footer__contact-btn"
+          onClick={() => setContactFormVisible((v) => !v)}
+          aria-expanded={isContactFormVisible}
+        >
+          {isContactFormVisible ? "Close Contact Form" : "Send Us a Message"}
+        </button>
+
+        {isContactFormVisible && (
+          <div className="footer__contact-form">
+            <ContactForm />
+          </div>
+        )}
+      </div>
+
+      {/* ── Bottom bar ────────────────────────────────────── */}
+      <div className="footer__bottom">
+        <div className="footer__bottom-inner">
+          <p className="footer__copyright">
+            &copy; {new Date().getFullYear()} IEEE CBIT Student Branch. All rights reserved.
+          </p>
+          <p className="footer__disclaimer">
+            A student branch of IEEE — Institute of Electrical and Electronics Engineers.
+          </p>
+        </div>
+      </div>
+
     </footer>
   );
 };
 
 export default Footer;
-

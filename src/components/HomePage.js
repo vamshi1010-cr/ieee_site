@@ -1,84 +1,88 @@
-import ImageCarousel from "./Carousel";
-// import CoreTeam from "./CoreTeam";
-import NavBar from "./NavBar";
+import Hero from "./Hero/Hero";
 import SocietyCards from "./SocietyCards";
 import Footer from "./Footer";
 import Events from "./Events";
 import TeamCarousel from "./TeamCarousel";
 import { useState } from "react";
-// import { useNavigation } from "react-router-dom";
-// import Spinner from "./Spinner";
+import "./HomePage.css";
+
 export default function HomePage() {
-  //   const [showWelcome, setShowWelcome] = useState(true);
-
-  //   useEffect(() => {
-  //
-  //     const timer = setTimeout(() => {
-  //       setShowWelcome(false);
-  //     }, 500); // Adjust the duration as needed
-
-  //     return () => clearTimeout(timer);
-  //   }, []);
   const [slideIndex, setSlideIndex] = useState(0);
-  // const navigation = useNavigation();
-  // const isLoading = navigation.state === "loading";
 
   return (
-    <div className="app-container">
-      {/* {showWelcome ? (
-        <div className="welcome-message">
-          <h1 className="welcome-heading">Welcome to IEEE CBIT</h1>
+    <div className="homepage">
+
+      {/* ── Hero ───────────────────────────────────────────── */}
+      <Hero />
+
+      {/* ── About ──────────────────────────────────────────── */}
+      <section className="hp-section hp-about" id="about">
+        <div className="hp-container">
+          <span className="hp-overline">About Us</span>
+          <h2 className="hp-heading">What is IEEE CBIT?</h2>
+          <p className="hp-body">
+            The IEEE CBIT Student Branch at Chaitanya Bharathi Institute of
+            Technology is a pioneering student branch affiliated with IEEE —
+            the world's largest technical professional organisation. We provide
+            a platform for students to engage with cutting-edge technology,
+            conduct events, seminars, and webinars, and network with industry
+            professionals.
+          </p>
+          <p className="hp-body">
+            The branch hosts flagship events like Robovanza, Masterclasses, and
+            Membership Drives every year. IEEE CBIT comprises eight specialised
+            societies, each focused on specific areas of engineering and
+            technology — giving every student a community that matches their
+            interests.
+          </p>
         </div>
-      ) : ( */}
-      <>
-        <NavBar itemId="societies" itemName="Societies" teamType="CoreTeam" />
-        <div className="section" id="home">
-          <ImageCarousel className="ImageCarousel" slideIndex={slideIndex} />
+      </section>
+
+      {/* ── Societies ──────────────────────────────────────── */}
+      <section className="hp-section hp-societies" id="societies">
+        <div className="hp-container">
+          <span className="hp-overline">Our Chapters</span>
+          <h2 className="hp-heading">Societies</h2>
+          <p className="hp-subheading">
+            Eight technical societies covering every domain of engineering —
+            find your community.
+          </p>
         </div>
-        <p
-          className="section-description section-divider"
-          // style={{ padding: "10px", fontFamily: "Helvetica, sans-serif" }}
-          style={{
-            padding: "10px",
-            fontFamily: "Helvetica, sans-serif",
-            textAlign: "justify",
-            fontSize: "18px",
-          }}
-          id="about"
-        >
-          <h1 style={{ textAlign: "center", color: 'white' }}>IEEE CBIT</h1>
-          <p style={{color:'white' }}>
-            The IEEE CBIT Student Chapter at Chaitanya Bharathi Institute of Technology is a pioneering club and student branch affiliated with IEEE. It provides a platform for students to engage with technology, conducts events, seminars, and webinars, and network with professionals. The club hosts events like Robovanza, Masterclasses, Membership Drives and many more every year. Being part of this club allows students to stay updated on the latest developments in the technical and research fields. Led by a passionate student team and supported by faculty advisors, we offer a stimulating environment to explore interests, hone skills, and prepare for a successful tech career.<br/> 
-          IEEE CBIT comprises seven specialized societies, each focused on specific areas of engineering and technology, including the Circuits and Systems Society, Computer Society, Education Society, Power and Energy Society, Robotics and Automation Society, Signal Processing Society, and Women in Engineering Society.
-       
-          </p> </p>
-        <div className="section" id="societies">
-          <h2 style={{color:'white' }} className="section-heading">Societies</h2>
+        <div className="hp-societies-grid">
           <SocietyCards />
-          <hr className="section-divider" />
         </div>
-        {/* <div className="section" id="coreteam">
-          <h2 className="section-heading">Core</h2>
-          <TeamCarousel />
-          <hr className="section-divider" />
-        </div> */}
-        <div className="section" id="coreteam">
-          <h2 style={{color:'white',fontSize: '52px' }} className="section-heading">
-            {"IEEE Senior Executive Board 2024-2025"}
-          </h2>
-          <TeamCarousel onSlideChange={setSlideIndex} />
-          <hr className="section-divider" />
-        </div>
+      </section>
 
-        <div className="section" id="events">
-          <h2 style={{color:'white' }} className="section-heading">Events</h2>
+      {/* ── Team ───────────────────────────────────────────── */}
+      <section className="hp-section hp-team" id="coreteam">
+        <div className="hp-container">
+          <span className="hp-overline">Leadership</span>
+          <h2 className="hp-heading">Senior Executive Board 2024–25</h2>
+          <p className="hp-subheading">
+            Meet the student leaders driving IEEE CBIT forward this year.
+          </p>
+        </div>
+        <TeamCarousel onSlideChange={setSlideIndex} />
+      </section>
+
+      {/* ── Events ─────────────────────────────────────────── */}
+      <section className="hp-section hp-events" id="events">
+        <div className="hp-container">
+          <span className="hp-overline">What's On</span>
+          <h2 className="hp-heading">Events</h2>
+          <p className="hp-subheading">
+            Workshops, competitions, and seminars — there's always something
+            happening at IEEE CBIT.
+          </p>
+        </div>
+        <div className="hp-container">
           <Events />
-          <hr className="section-divider" />
         </div>
+      </section>
 
-        <Footer />
-      </>
-      {/* )} */}
+      {/* ── Footer ─────────────────────────────────────────── */}
+      <Footer />
+
     </div>
   );
 }

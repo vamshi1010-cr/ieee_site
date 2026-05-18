@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "./Navbar/Navbar";
 import Events from "./Events";
 import TeamMembers from "./TeamMembers";
 import "./ComputerSociety.css";

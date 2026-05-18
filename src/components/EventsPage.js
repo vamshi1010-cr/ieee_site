@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "./Carousel";
-import NavBar from "./NavBar";
+import NavBar from "./Navbar/Navbar";
 import EventNotFound from "./EventNotFound";
 // import events from "../static/event_details";
 import { useParams } from "react-router-dom";

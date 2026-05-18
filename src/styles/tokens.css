@@ -1,0 +1,192 @@
+/* ============================================================
+   IEEE CBIT — Design Tokens
+   src/styles/tokens.css
+   Import this in src/index.css as the very first line:
+   @import './styles/tokens.css';
+   ============================================================ */
+
+/* ─── Brand Colors ─────────────────────────────────────────── */
+:root {
+  --ieee-blue:          #006699;   /* IEEE primary blue */
+  --ieee-navy:          #003366;   /* IEEE deep navy — hero bg, footer */
+  --ieee-blue-hover:    #005580;   /* button/link hover state */
+  --ieee-blue-light:    #e6f2f8;   /* tinted bg for highlight sections */
+  --ieee-blue-mid:      #cce4f0;   /* borders on blue-tinted surfaces */
+
+  /* ─── Neutrals ───────────────────────────────────────────── */
+  --ieee-white:         #ffffff;
+  --ieee-gray-50:       #f9f9f9;   /* page background */
+  --ieee-gray-100:      #f5f5f5;   /* section alternate bg */
+  --ieee-gray-200:      #e8e8e8;   /* card borders, dividers */
+  --ieee-gray-300:      #d0d0d0;   /* input borders */
+  --ieee-gray-400:      #aaaaaa;   /* placeholder text */
+  --ieee-gray-500:      #777777;   /* muted / secondary text */
+  --ieee-gray-700:      #444444;   /* body text */
+  --ieee-gray-900:      #1a1a1a;   /* headings */
+
+  /* ─── Semantic Colors ────────────────────────────────────── */
+  --ieee-success:       #2e7d32;
+  --ieee-success-bg:    #e8f5e9;
+  --ieee-warning:       #b45309;
+  --ieee-warning-bg:    #fef3c7;
+  --ieee-danger:        #c62828;
+  --ieee-danger-bg:     #fdecea;
+  --ieee-info:          #006699;   /* same as primary blue */
+  --ieee-info-bg:       #e6f2f8;
+
+  /* ─── Typography ─────────────────────────────────────────── */
+  --font-sans:          'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-mono:          'Fira Code', 'Courier New', monospace;
+
+  --text-xs:            0.75rem;   /* 12px — badges, labels */
+  --text-sm:            0.875rem;  /* 14px — captions, meta */
+  --text-base:          1rem;      /* 16px — body */
+  --text-lg:            1.125rem;  /* 18px — lead text */
+  --text-xl:            1.25rem;   /* 20px — card headings */
+  --text-2xl:           1.5rem;    /* 24px — section sub-headings */
+  --text-3xl:           1.875rem;  /* 30px — section headings */
+  --text-4xl:           2.5rem;    /* 40px — hero heading */
+  --text-5xl:           3.25rem;   /* 52px — hero heading large screens */
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold:600;
+
+  --line-height-tight:  1.2;
+  --line-height-snug:   1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed:1.75;
+
+  /* ─── Spacing ────────────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;   /* standard section vertical padding */
+  --space-24:  96px;
+
+  /* ─── Border Radius ──────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full:9999px;  /* pills, avatar circles */
+
+  /* ─── Shadows ────────────────────────────────────────────── */
+  --shadow-xs:  0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-card:0 2px 8px rgba(0, 102, 153, 0.08); /* blue-tinted card shadow */
+
+  /* ─── Borders ────────────────────────────────────────────── */
+  --border-thin:   0.5px solid var(--ieee-gray-200);
+  --border-default:1px   solid var(--ieee-gray-200);
+  --border-medium: 1px   solid var(--ieee-gray-300);
+  --border-blue:   1px   solid var(--ieee-blue);
+  --border-navy:   1px   solid var(--ieee-navy);
+
+  /* ─── Layout ─────────────────────────────────────────────── */
+  --container-max:    1200px;
+  --container-pad:    clamp(1rem, 5vw, 2rem);  /* responsive side padding */
+  --navbar-height:    68px;
+  --section-padding:  var(--space-20) 0;        /* 80px top/bottom */
+
+  /* ─── Z-index scale ──────────────────────────────────────── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-dropdown:100;
+  --z-sticky:  200;
+  --z-overlay: 300;
+  --z-modal:   400;
+  --z-toast:   500;
+
+  /* ─── Transitions ────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ─── Component-specific shortcuts ──────────────────────── */
+
+  /* Navbar */
+  --navbar-bg:          var(--ieee-white);
+  --navbar-border:      var(--ieee-gray-200);
+  --navbar-link-color:  var(--ieee-gray-700);
+  --navbar-link-active: var(--ieee-blue);
+  --navbar-link-hover:  var(--ieee-blue);
+
+  /* Hero section */
+  --hero-bg:            var(--ieee-navy);
+  --hero-text:          var(--ieee-white);
+  --hero-subtext:       rgba(255, 255, 255, 0.80);
+  --hero-cta-primary:   var(--ieee-blue);
+  --hero-cta-outline:   transparent;
+
+  /* Cards */
+  --card-bg:            var(--ieee-white);
+  --card-border:        var(--ieee-gray-200);
+  --card-radius:        var(--radius-lg);
+  --card-padding:       var(--space-6);
+  --card-shadow:        var(--shadow-card);
+  --card-hover-border:  var(--ieee-blue);
+  --card-hover-shadow:  var(--shadow-md);
+
+  /* Buttons */
+  --btn-primary-bg:     var(--ieee-blue);
+  --btn-primary-text:   var(--ieee-white);
+  --btn-primary-hover:  var(--ieee-blue-hover);
+  --btn-outline-border: var(--ieee-blue);
+  --btn-outline-text:   var(--ieee-blue);
+  --btn-outline-hover-bg: var(--ieee-blue);
+  --btn-outline-hover-text: var(--ieee-white);
+  --btn-radius:         var(--radius-md);
+  --btn-padding:        10px 24px;
+  --btn-font-size:      var(--text-sm);
+  --btn-font-weight:    var(--font-weight-medium);
+
+  /* Section labels (e.g. "OUR SOCIETIES") */
+  --label-color:        var(--ieee-blue);
+  --label-size:         var(--text-xs);
+  --label-weight:       var(--font-weight-semibold);
+  --label-spacing:      0.1em;
+
+  /* Society / event cards */
+  --society-accent:     var(--ieee-blue);
+  --event-date-bg:      var(--ieee-navy);
+  --event-date-text:    var(--ieee-white);
+  --event-tag-bg:       var(--ieee-blue-light);
+  --event-tag-text:     var(--ieee-blue);
+
+  /* Footer */
+  --footer-bg:          var(--ieee-navy);
+  --footer-text:        rgba(255, 255, 255, 0.85);
+  --footer-heading:     var(--ieee-white);
+  --footer-link:        rgba(255, 255, 255, 0.70);
+  --footer-link-hover:  var(--ieee-white);
+  --footer-border:      rgba(255, 255, 255, 0.12);
+
+  /* Forms */
+  --input-bg:           var(--ieee-white);
+  --input-border:       var(--ieee-gray-300);
+  --input-border-focus: var(--ieee-blue);
+  --input-text:         var(--ieee-gray-900);
+  --input-placeholder:  var(--ieee-gray-400);
+  --input-radius:       var(--radius-md);
+  --input-padding:      10px 14px;
+
+  /* Badges / Tags */
+  --badge-blue-bg:      var(--ieee-blue-light);
+  --badge-blue-text:    var(--ieee-blue);
+  --badge-navy-bg:      var(--ieee-navy);
+  --badge-navy-text:    var(--ieee-white);
+  --badge-radius:       var(--radius-full);
+  --badge-padding:      3px 10px;
+  --badge-font-size:    var(--text-xs);
+  --badge-font-weight:  var(--font-weight-medium);
+}
