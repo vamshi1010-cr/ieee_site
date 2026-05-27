@@ -1,0 +1,225 @@
+/* ============================================================
+   EventsPage.css — IEEE CBIT
+   Uses tokens from src/styles/tokens.css
+   ============================================================ */
+
+/* ── Spinner fullpage ──────────────────────────────────────── */
+.ep-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* ── Page wrapper ──────────────────────────────────────────── */
+.ep {
+  background: var(--ieee-white);
+  min-height: 100vh;
+}
+
+/* ── Carousel wrapper ──────────────────────────────────────── */
+.ep__carousel-wrap {
+   width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+  background: var(--ieee-navy);
+}
+
+/* Override Bootstrap carousel styles */
+.ep__carousel-wrap .carousel-container {
+  padding-top: 0 !important;
+}
+
+.ep__carousel-wrap .carousel-image-container {
+   width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;  
+}
+
+.ep__carousel-wrap .carousel-img {
+   width: 100%;
+  height: 100%;
+  object-fit: contain;       /* was cover — contain shows full image without cropping */
+  object-position: center;
+  display: block;
+}
+
+/* Bootstrap carousel control arrows — restyle */
+.ep__carousel-wrap .carousel-control-prev,
+.ep__carousel-wrap .carousel-control-next {
+  width: 48px;
+  opacity: 1;
+}
+
+.ep__carousel-wrap .carousel-control-prev-icon,
+.ep__carousel-wrap .carousel-control-next-icon {
+  background-color: var(--ieee-navy);
+  border-radius: var(--radius-full);
+  padding: 20px;
+  background-size: 50%;
+}
+
+.ep__carousel-wrap .carousel-indicators [data-bs-target] {
+  background-color: var(--ieee-blue);
+  border-radius: var(--radius-full);
+  width: 8px;
+  height: 8px;
+}
+
+/* ── Body section ──────────────────────────────────────────── */
+.ep__body {
+  padding: var(--space-12) 0 var(--space-20);
+}
+
+.ep__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* ── Back link ─────────────────────────────────────────────── */
+.ep__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--ieee-gray-500);
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.ep__back:hover {
+  color: var(--ieee-blue);
+  gap: var(--space-3);
+}
+
+/* ── Society tag ───────────────────────────────────────────── */
+.ep__tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--ieee-blue);
+  background: var(--ieee-blue-light);
+  border: 1px solid var(--ieee-blue-mid);
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-4);
+}
+
+/* ── Title ─────────────────────────────────────────────────── */
+.ep__title {
+ font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;          /* was 700 — Georgia 400 looks cleaner for long titles */
+  color: var(--ieee-navy);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-5);
+}
+
+/* ── Meta row ──────────────────────────────────────────────── */
+.ep__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.ep__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--ieee-gray-500);
+}
+
+.ep__meta-item svg {
+  flex-shrink: 0;
+  color: var(--ieee-blue);
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+.ep__divider {
+  height: 1px;
+  background: var(--ieee-gray-200);
+  margin: var(--space-6) 0;
+}
+
+/* ── Description ───────────────────────────────────────────── */
+.ep__description {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--ieee-gray-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ── Info cards grid ───────────────────────────────────────── */
+.ep__info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.ep__info-card {
+  background: var(--ieee-gray-100);
+  border: 1px solid var(--ieee-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-left: 3px solid var(--ieee-blue);
+}
+
+.ep__info-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--ieee-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ep__info-value {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--ieee-navy);
+  line-height: var(--line-height-snug);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ep__carousel-wrap,
+  .ep__carousel-wrap .carousel-image-container {
+    max-height: 280px;
+    height: 280px;
+  }
+
+  .ep__info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ep__title {
+    font-size: 1.6rem;
+  }
+
+  .ep__description {
+    font-size: var(--text-base);
+  }
+}
