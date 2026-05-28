@@ -5,11 +5,11 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import "./Navbar.css";
 
 const NAV_LINKS = [
-  { label: "Home",    path: "/" },
-  { label: "Events",  path: "/events" },   // note: your route is /events/:id, adjust if needed
-  { label: "Login",   path: "/login" },
+  { label: "Home",      path: "/" },
+  { label: "Societies", path: "/#societies" },
+  { label: "Events",    path: "/#events" },
+  { label: "Login",     path: "/login" },
 ];
-
 export default function Navbar() {
   const location = useLocation();
   const [scrolled, setScrolled]     = useState(false);
@@ -64,9 +64,9 @@ export default function Navbar() {
           </ul>
 
           {/* ── CTA button (desktop) ─────────────────────────── */}
-          <Link to="/events" className="navbar__cta">
-            Upcoming Events
-          </Link>
+         <Link to="/#events" className="navbar__cta">
+  Upcoming Events
+</Link>
 
           {/* ── Mobile hamburger ──────────────────────────────── */}
           <button
