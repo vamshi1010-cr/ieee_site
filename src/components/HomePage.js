@@ -62,7 +62,7 @@ export default function HomePage() {
             Meet the student leaders driving IEEE CBIT forward this year.
           </p>
         </div>
-        <TeamCarousel onSlideChange={setSlideIndex} />
+        <TeamCarousel />
       </section>
 
       {/* ── Events ─────────────────────────────────────────── */}
