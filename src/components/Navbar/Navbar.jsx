@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
 
           {/* ── Desktop links ─────────────────────────────────── */}
-          <ul className="navbar__links" role="list">
+          <ul className="navbar__links">
             {NAV_LINKS.map(({ label, path }) => (
               <li key={path}>
                 <Link
@@ -111,7 +111,7 @@ export default function Navbar() {
           </div>
 
           {/* Drawer links */}
-          <ul className="drawer__links" role="list">
+          <ul className="drawer__links">
             {NAV_LINKS.map(({ label, path }) => (
               <li key={path}>
                 <Link

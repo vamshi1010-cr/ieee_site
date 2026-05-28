@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./HomePage.css";
 
 export default function HomePage() {
-  const [slideIndex, setSlideIndex] = useState(0);
+  
 
   return (
     <div className="homepage">
