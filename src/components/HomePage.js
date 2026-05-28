@@ -3,7 +3,7 @@ import SocietyCards from "./SocietyCards";
 import Footer from "./Footer";
 import Events from "./Events";
 import TeamCarousel from "./TeamCarousel";
-import { useState } from "react";
+
 import "./HomePage.css";
 
 export default function HomePage() {
