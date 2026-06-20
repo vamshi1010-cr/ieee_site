@@ -2,17 +2,15 @@ import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  { name: "Sowmya Nihitha", position: "Chair",      image: "images/es/img-1 2025.png" },
-  { name: "Aashrtha",       position: "Vice Chair",  image: "images/es/img-2 2025.png" },
+  { name: "Anugu Srinithi",         position: "Chair",      image: "images/es/img-1 2025.png" },
+  { name: "M. Koushik Ram Reddy",   position: "Vice Chair",  image: "images/es/img-2 2025.png" },
 ];
 
 const juniorEB = [
   { name: "Bheema Sai Rithvik",        position: "Design" },
   { name: "Shaganti Jennifer Shalom",  position: "Design" },
   { name: "Akella Harshith Saipaavan", position: "Documentation" },
-  { name: "Anugu Srinithi Reddy",      position: "Documentation" },
   { name: "T. Sai Sharan",             position: "Documentation" },
-  { name: "M. Koushik Ram Reddy",      position: "Events & PR" },
   { name: "N. Yashwanth Sarma",        position: "Events & PR" },
   { name: "Pothyreddy Likhitha",       position: "Events & PR" },
   { name: "Tanvi Bejadi",              position: "Social Media" },

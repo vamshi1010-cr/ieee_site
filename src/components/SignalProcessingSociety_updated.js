@@ -2,8 +2,8 @@ import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  { name: "Sruthi Madhavan", position: "Chair",      image: "images/sps/img-1 2025.png" },
-  { name: "Surya Teja",      position: "Vice Chair",  image: "images/sps/img-2 2025.png" },
+  { name: "Mahidhar Kumar Reddy", position: "Chair",      image: "images/sps/img-01 2025.png" },
+  { name: "Megha Annavarapu",     position: "Vice Chair",  image: "images/sps/img-02 2025.png" },
 ];
 
 const juniorEB = [
@@ -13,10 +13,8 @@ const juniorEB = [
   { name: "K Sai Sushanth Reddy",         position: "Design" },
   { name: "Akash Sudhir",                 position: "Documentation" },
   { name: "Sri Sathvik Varma Saripella",  position: "Documentation" },
-  { name: "Megha Annavarapu",             position: "Events & PR" },
   { name: "Sheroji Rahul",                position: "Events & PR" },
   { name: "Soumya Vemuri",               position: "Events & PR" },
-  { name: "Yekula Mahidhar Kumar Reddy",  position: "Events & PR" },
   { name: "A Rajeshwari",                 position: "Social Media" },
   { name: "Rukmini Lanka",               position: "Social Media" },
   { name: "Kura Samiksha Reddy",          position: "Tech" },

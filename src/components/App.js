@@ -1,15 +1,16 @@
+
 import HomePage from "./HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNotFound from "./PageNotFound";
-import ComputerSociety from "./ComputerSociety";
-import SignalProcessingSociety from "./SignalProcessingSociety";
+import ComputerSociety from "./ComputerSociety_updated";
+import SignalProcessingSociety from "./SignalProcessingSociety_updated";
 import CircuitsAndSystemsSociety from "./CircuitsAndSystemsSociety";
-import RoboticsAutomationSociety from "./RoboticsAutomationSociety";
-import WomenEngineeringSociety from "./WomenEngineeringSociety";
-import EducationSociety from "./EducationSociety";
-import PowerEnergySociety from "./PowerEnergySociety";
-import VehicularTechnologySociety from "./VehicularTechnologySociety";
+import RoboticsAutomationSociety from "./RoboticsAutomationSociety_updated";
+import WomenEngineeringSociety from "./WomenEngineeringSociety_updated";
+import EducationSociety from "./EducationSociety_updated";
+import PowerEnergySociety from "./PowerEnergySociety_updated";
+import VehicularTechnologySociety from "./VehicularTechnologySociety_updated";
 import EventsPage from "./EventsPage";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -35,6 +36,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
+      
         <Navbar />                        {/* ← ADD THIS */}
         
         <ScrollToTop />

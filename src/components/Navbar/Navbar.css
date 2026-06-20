@@ -38,10 +38,10 @@
   gap: var(--space-3);
   text-decoration: none;
   flex-shrink: 0;
+  margin-right: var(--space-4);   /* ADD THIS */
 }
-
 .navbar__logo-img {
-  height: 36px;
+  height: 70px;    /* was 44px, slightly more breathing room */
   width: auto;
   object-fit: contain;
 }
@@ -53,21 +53,21 @@
 }
 
 .navbar__logo-ieee {
-  font-family: var(--font-sans);
+  font-family: Georgia, 'Times New Roman', serif;   /* was var(--font-sans) */
   font-size: var(--text-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--ieee-blue);
-  letter-spacing: 0.04em;
+  font-weight: 700;                                  /* was --font-weight-semibold */
+  color: var(--ieee-navy);                            /* was --ieee-blue */
+  letter-spacing: 0.02em;                              /* was 0.04em */
 }
 
 .navbar__logo-cbit {
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  font-weight: var(--font-weight-medium);
-  color: var(--ieee-gray-500);
-  letter-spacing: 0.08em;
+  font-size: 10px;                                    /* was --text-xs, tighter now */
+  font-weight: var(--font-weight-semibold);
+  color: var(--ieee-blue);                             /* was --ieee-gray-500 */
+  letter-spacing: 0.14em;                              /* was 0.08em, more spaced */
   text-transform: uppercase;
-  margin-top: 1px;
+  margin-top: 0;                                       /* was 1px */
 }
 
 /* ── Desktop nav links ─────────────────────────────────────── */
@@ -87,11 +87,11 @@
   display: inline-block;
   padding: var(--space-2) var(--space-3);
   font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--navbar-link-color);
+  font-size: 14px;                                    /* explicit, was --text-sm */
+  font-weight: 500;                                    /* was --font-weight-medium, same value but explicit */
+  color: var(--ieee-gray-700);                          /* was --navbar-link-color, slightly darker for crispness */
+  letter-spacing: 0.01em;                               /* ADD THIS — subtle tracking like the hero overline */
   text-decoration: none;
-  border-radius: var(--radius-sm);
   transition: color var(--transition-fast);
 }
 

@@ -530,3 +530,4 @@ a:hover {
 .card-animate.visible {
   animation: fadeInUp 0.8s ease forwards; /* Trigger animation */
 }
+

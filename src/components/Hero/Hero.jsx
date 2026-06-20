@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
+import CircuitGrid from "./CircuitGrid";
 import "./Hero.css";
 
 const STATS = [
@@ -26,9 +28,8 @@ export default function Hero() {
   return (
     <section className="hero" ref={sectionRef} aria-label="IEEE CBIT introduction">
 
-      {/* ── Subtle dot-grid background ───────────────────── */}
-      <div className="hero__dotgrid" aria-hidden="true" />
-
+      
+      <CircuitGrid />
       <div className="hero__inner">
 
         {/* ── Left column ───────────────────────────────── */}
@@ -57,7 +58,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="hero__actions hero__animate">
-            <Link to="/computer-society" className="hero__btn hero__btn--primary">
+            <Link to="/#societies" className="hero__btn hero__btn--primary">
               Explore Societies
             </Link>
             <a

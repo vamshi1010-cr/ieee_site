@@ -2,8 +2,9 @@ import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  { name: "Disha Jilella", position: "Chair",      image: "images/ras/img 1 2025.png" },
-  { name: "Tarini",        position: "Vice Chair",  image: "images/ras/img 2 2025.png" },
+  { name: "Tarini Rudrashetty", position: "Chair", image: "images/ras/img 2 2025.png" },
+  
+   { name: "Y. Harshith Kumar", position: "Vice Chair", image: "images/ras/img 1 2025.png" },
 ];
 
 const juniorEB = [
@@ -18,7 +19,6 @@ const juniorEB = [
   { name: "CH Harshavardhan",      position: "Social Media" },
   { name: "K Vamshi Chandra Reddy",position: "Tech" },
   { name: "Mugdha Battula",        position: "Tech" },
-  { name: "Yerra Harshith Kumar",  position: "Tech" },
 ];
 
 export default function RoboticsAutomationSociety() {

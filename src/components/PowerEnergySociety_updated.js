@@ -2,8 +2,9 @@ import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  { name: "Fatema Sihorwala", position: "Chair",      image: "images/pes/img0.jpg" },
-  { name: "Osman Pasha",      position: "Vice Chair",  image: "images/pes/img1.jpg" },
+  { name: "Raghavendra Badri Vishal B", position: "Chair", image: "images/pes/img0.png" },
+
+  { name: "Srinidhi Ganti", position: "Vice Chair", image: "images/pes/img1.png" },
 ];
 
 const juniorEB = [
@@ -12,7 +13,6 @@ const juniorEB = [
   { name: "Pavan Haneesh Mattigunta",          position: "Documentation" },
   { name: "Vulli Sai Vaibhav",                 position: "Documentation" },
   { name: "Abhinav Aditya Korikana",           position: "Events & PR" },
-  { name: "Raghavendra Badri Vishal Bandri",   position: "Events & PR" },
   { name: "Riya Kumari",                       position: "Events & PR" },
   { name: "Vasu Bhukya",                       position: "Events & PR" },
   { name: "Trivardhan Rachakonda",             position: "Social Media" },

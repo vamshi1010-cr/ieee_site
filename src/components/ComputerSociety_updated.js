@@ -2,16 +2,8 @@ import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  {
-    name:     "Sriya Kotagiriwar",
-    position: "Chair",
-    image:    "images/cs/img-1 2025.png",
-  },
-  {
-    name:     "Indu Priya",
-    position: "Vice Chair",
-    image:    "images/cs/img-2 2025.png",
-  },
+  { name: "Pullayi Thrisha", position: "Chair",      image: "images/cs/img-1 2025.png" },
+  { name: "Mahit Hazari",    position: "Vice Chair",  image: "images/cs/img-2 2025.png" },
 ];
 
 const juniorEB = [
@@ -23,7 +15,6 @@ const juniorEB = [
   { name: "Srikar Acharya",         position: "Tech" },
   { name: "Nikhil Hazari",          position: "Tech" },
   { name: "Pragallapati Saketh",    position: "Tech" },
-  { name: "Pullayi Thrisha",        position: "Tech" },
   { name: "Rushil Sarapu",          position: "Tech" },
   { name: "Shashidhar Nagunuri",    position: "Tech" },
   { name: "Vishnu Vardhan",         position: "Tech" },

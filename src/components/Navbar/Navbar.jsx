@@ -1,4 +1,6 @@
+import { useUser } from "../../features/authentication/useUser";
 import React, { useState, useEffect } from "react";
+
 import { Link, useLocation } from "react-router-dom";
 import { Drawer } from "antd";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
@@ -14,6 +16,8 @@ export default function Navbar() {
   const location = useLocation();
   const [scrolled, setScrolled]     = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const { isAuthenticated } = useUser();
 
   /* Add shadow when user scrolls down */
   useEffect(() => {
@@ -37,17 +41,12 @@ export default function Navbar() {
 
           {/* ── Logo ─────────────────────────────────────────── */}
           <Link to="/" className="navbar__logo" aria-label="IEEE CBIT home">
-            <img
-              src="/ieee-logo.png"
-              alt="IEEE logo"
-              className="navbar__logo-img"
-              onError={(e) => { e.currentTarget.style.display = "none"; }}
-            />
-            <div className="navbar__logo-text">
-              <span className="navbar__logo-ieee">IEEE</span>
-              <span className="navbar__logo-cbit">CBIT</span>
-            </div>
-          </Link>
+  <img
+    src="/ieee-cbit-logo.png"
+    alt="IEEE CBIT"
+    className="navbar__logo-img"
+  />
+</Link>
 
           {/* ── Desktop links ─────────────────────────────────── */}
           <ul className="navbar__links">
@@ -61,12 +60,22 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            {isAuthenticated && (
+              <li>
+                <Link
+                  to="/add-event"
+                  className={`navbar__link${isActive("/add-event") ? " navbar__link--active" : ""}`}
+                >
+                  Add Event
+                </Link>
+              </li>
+            )}
           </ul>
 
           {/* ── CTA button (desktop) ─────────────────────────── */}
-         <Link to="/#events" className="navbar__cta">
-  Upcoming Events
-</Link>
+          <Link to="/#events" className="navbar__cta">
+            Upcoming Events
+          </Link>
 
           {/* ── Mobile hamburger ──────────────────────────────── */}
           <button
@@ -123,11 +132,22 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            {isAuthenticated && (
+              <li>
+                <Link
+                  to="/add-event"
+                  className={`drawer__link${isActive("/add-event") ? " drawer__link--active" : ""}`}
+                >
+                  Add Event
+                  {isActive("/add-event") && <span className="drawer__active-dot" aria-hidden="true" />}
+                </Link>
+              </li>
+            )}
           </ul>
 
           {/* Drawer footer CTA */}
           <div className="drawer__footer">
-            <Link to="/events" className="drawer__cta" onClick={() => setDrawerOpen(false)}>
+            <Link to="/#events" className="drawer__cta" onClick={() => setDrawerOpen(false)}>
               Upcoming Events
             </Link>
           </div>

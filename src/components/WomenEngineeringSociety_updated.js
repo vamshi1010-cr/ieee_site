@@ -1,12 +1,10 @@
-// ============================================================
-// WomenEngineeringSociety.js
-// ============================================================
 import React from "react";
 import SocietyPage from "./SocietyPage";
 
 const leadership = [
-  { name: "Sri Sarayu",   position: "Chair",      image: "images/wie/img-1 2025.png" },
-  { name: "Drithi Reddy", position: "Vice Chair",  image: "images/wie/img-2 2025.png" },
+  
+   { name: "Bandaru Srilakshmi Sowmya", position: "Chair", image: "images/wie/img-01 2025.png" },
+  { name: "Obulapuram Samhita", position: "Vice Chair", image: "images/wie/img-02 2025.png" },
 ];
 
 const juniorEB = [
