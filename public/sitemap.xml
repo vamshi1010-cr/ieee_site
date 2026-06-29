@@ -1,72 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-    <url>
-    <loc>https://cbit-ieee.netlify.app/</loc>
-    <changefreq>monthly</changefreq>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/</loc>
     <priority>1.0</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/computer-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/computer-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/signal-processing-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/circuits-systems-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/circuits-systems-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/education-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/robotics-automation-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/power-energy-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/women-engineering-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/robotics-automation-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/education-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/signal-processing-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/vehicular-technology-society</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/women-engineering-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/login</loc>
-    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ieee-cbit-official.vercel.app/vehicular-technology-society</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/power-energy-society</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/events/:id</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/add-event</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://cbit-ieee.netlify.app/*</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    </url>
+  </url>
 </urlset>
